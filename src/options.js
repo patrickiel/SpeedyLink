@@ -56,16 +56,18 @@ function saveSets() {
     localStorage.setItem("sets", JSON.stringify(sets));
 }
 
+let tempSets = [];
+
 document.addEventListener("DOMContentLoaded", function () {
     renderSets();
 
     document.getElementById("addSet").addEventListener("click", function () {
-        const sets = JSON.parse(localStorage.getItem("sets")) || [];
-        sets.push({ name: "", url: "" });
-        localStorage.setItem("sets", JSON.stringify(sets));
+        updateTempSets();
+        tempSets.push({ name: "", url: "" });
+        localStorage.setItem("sets", JSON.stringify(tempSets));
         renderSets();
     });
-
+    
     document.getElementById("saveButton").addEventListener("click", function () {
         saveOptions();
     });
@@ -101,3 +103,16 @@ document.addEventListener("DOMContentLoaded", function () {
         storeEnteredTextCheckbox.checked = storeEnteredText !== null ? storeEnteredText : true;
     }
 });
+
+function updateTempSets() {
+    const setNameInputs = document.querySelectorAll(".setName");
+    const setUrlInputs = document.querySelectorAll(".setUrl");
+    tempSets = [];
+
+    setNameInputs.forEach((input, index) => {
+        tempSets.push({
+            name: input.value,
+            url: setUrlInputs[index].value,
+        });
+    });
+}

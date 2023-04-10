@@ -1,6 +1,7 @@
 body {
     width: 100%;
     background: white;
+    min-width: 200px;
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
 }

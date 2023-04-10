@@ -6,16 +6,22 @@ function renderSets() {
     // Filter out sets with empty names or urls
     const filteredSets = sets.filter(set => set.name.trim() !== "" && set.url.trim() !== "");
 
-    filteredSets.forEach((set, index) => {
-        setsContainer.appendChild(createSetRow(set, index));
-    });
+    if (filteredSets.length === 0) {
+        const noSetsMessage = document.createElement("p");
+        noSetsMessage.textContent = "No links are defined, go to Options and add some links.";
+        setsContainer.parentNode.insertBefore(noSetsMessage, setsContainer);
+    } else {
+        filteredSets.forEach((set, index) => {
+            setsContainer.appendChild(createSetRow(set, index));
+        });
 
-    // Focus the last used input box
-    const lastUsedInput = parseInt(localStorage.getItem("lastUsedInput"), 10) || 0;
-    const inputFields = document.querySelectorAll(".input");
-    if (inputFields[lastUsedInput]) {
-        inputFields[lastUsedInput].focus();
-        inputFields[lastUsedInput].select();
+        // Focus the last used input box
+        const lastUsedInput = parseInt(localStorage.getItem("lastUsedInput"), 10) || 0;
+        const inputFields = document.querySelectorAll(".input");
+        if (inputFields[lastUsedInput]) {
+            inputFields[lastUsedInput].focus();
+            inputFields[lastUsedInput].select();
+        }
     }
 }
 
@@ -52,7 +58,7 @@ function createSetRow(set, index) {
     const buttonCell = document.createElement("td");
     const navigateButton = document.createElement("button");
     navigateButton.className = "navigate";
-    navigateButton.textContent = "Navigate";
+    navigateButton.textContent = "Open";
     navigateButton.tabIndex = -1;
     buttonCell.appendChild(navigateButton);
     row.appendChild(buttonCell);
@@ -79,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     renderSets();
 
     var settingsIcon = document.querySelector('.settings');
-    settingsIcon.addEventListener('click', function() {
-      chrome.runtime.openOptionsPage();
+    settingsIcon.addEventListener('click', function () {
+        chrome.runtime.openOptionsPage();
     });
 });
