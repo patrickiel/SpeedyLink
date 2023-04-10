@@ -1,7 +1,10 @@
 SpeedyLink
 =========================
 
-This is a simple Chrome extension that allows the user to navigate to predefined URLs with customizable input parameters.
+This is a simple Chrome extension that allows the user to navigate to predefined URLs with customizable input parameters at the end.
+I use it to quickly open Jira links.
+
+![image](https://user-images.githubusercontent.com/86125971/230999055-79e3a0de-dc09-4277-a464-a26c51823725.png)
 
 Features
 --------
@@ -18,15 +21,11 @@ Install from the Chrome [WebStore](https://chrome.google.com/webstore/search/Spe
 3.  Enable "Developer mode".
 4.  Click "Load unpacked" and select the directory containing the extension files.
 
-Usage
+Options
 -----
-
-### Options
 
 To configure the extension, right-click the extension icon and select "Options".
 
 In the options page, you can define multiple sets of URLs by entering a name and URL for each set. You can also specify whether to open links in a new tab or the current tab.
 
-### Popup
-
-To use the extension, click the extension icon to open the popup. Select a URL set from the dropdown, enter input parameters in the text field, and click "Navigate" or press Enter to navigate to the selected URL with the input parameters appended.
+![image](https://user-images.githubusercontent.com/86125971/230999111-ef1b3569-61e1-4c9f-b0c4-6fed2be0ac36.png)
