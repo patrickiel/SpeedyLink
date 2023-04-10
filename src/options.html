@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 600px;
+            font-family: Arial, sans-serif;
+        }
+
+        .set-container {
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-right: 5px;
+        }
+
+        #addSet {
+            margin-bottom: 10px;
+        }
+
+        #button-container {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SpeedyLink - Options</h1>
+
+    <p>You can define multiple presets:</p>
+
+    <div id="sets"></div>
+
+    <div id="button-container">
+        <button id="addSet">Add</button>
+    </div>
+
+    <div>
+        <input type="checkbox" id="openInNewTab">
+        <label for="openInNewTab">Open links in a new tab</label>
+    </div>
+    <div>
+        <input type="checkbox" id="storeEnteredText">
+        <label for="storeEnteredText">Store entered text in the popup</label>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+
+</html>
