@@ -60,14 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
     renderSets();
 
     document.getElementById("addSet").addEventListener("click", function () {
-        saveOptions();
         const sets = JSON.parse(localStorage.getItem("sets")) || [];
         sets.push({ name: "", url: "" });
         localStorage.setItem("sets", JSON.stringify(sets));
         renderSets();
     });
 
-    window.addEventListener("beforeunload", function () {
+    document.getElementById("saveButton").addEventListener("click", function () {
         saveOptions();
     });
 

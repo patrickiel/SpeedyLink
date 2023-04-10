@@ -3,7 +3,10 @@ function renderSets() {
     setsContainer.innerHTML = "";
     const sets = JSON.parse(localStorage.getItem("sets")) || [];
 
-    sets.forEach((set, index) => {
+    // Filter out sets with empty names or urls
+    const filteredSets = sets.filter(set => set.name.trim() !== "" && set.url.trim() !== "");
+
+    filteredSets.forEach((set, index) => {
         setsContainer.appendChild(createSetRow(set, index));
     });
 
@@ -74,4 +77,9 @@ function createSetRow(set, index) {
 
 document.addEventListener("DOMContentLoaded", function () {
     renderSets();
+
+    var settingsIcon = document.querySelector('.settings');
+    settingsIcon.addEventListener('click', function() {
+      chrome.runtime.openOptionsPage();
+    });
 });
