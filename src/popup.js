@@ -69,11 +69,11 @@ function createSetRow(set, index) {
         const sets = JSON.parse(localStorage.getItem("sets")) || [];
         if (sets[setIndex]) {
             const newUrl = sets[setIndex].url + inputField.value;
-            const openInNewTab = JSON.parse(localStorage.getItem("openInNewTab"));
-            if (openInNewTab) {
-                chrome.tabs.create({ url: newUrl });
-            } else {
+            const openInCurrentTab = JSON.parse(localStorage.getItem("openInCurrentTab"));
+            if (openInCurrentTab) {
                 chrome.tabs.update({ url: newUrl });
+            } else {
+                chrome.tabs.create({ url: newUrl });
             }
         }
     });

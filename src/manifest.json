@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "SpeedyLink",
     "version": "1.0",
-    "description": "Navigate to a URL with user-defined text",
+    "description": "Navigate to predefined URLs with customizable input parameters at the end. It can be used to quickly open Jira links and much more.",
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
