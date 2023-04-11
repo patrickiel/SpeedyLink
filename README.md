@@ -28,4 +28,4 @@ To configure the extension, right-click the extension icon and select "Options".
 
 In the options page, you can define multiple sets of URLs by entering a name and URL for each set. You can also specify whether to open links in a new tab or the current tab.
 
-![image](https://user-images.githubusercontent.com/86125971/230999111-ef1b3569-61e1-4c9f-b0c4-6fed2be0ac36.png)
+![230999111-ef1b3569-61e1-4c9f-b0c4-6fed2be0ac36](https://user-images.githubusercontent.com/86125971/231169023-93ef4535-3c72-4c6b-b162-1d55889c19cc.png)
