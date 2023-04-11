@@ -14,6 +14,7 @@ h1 {
 
 p {
     margin-bottom: 20px;
+    font-size: 14px;
 }
 
 .set-container {
@@ -69,4 +70,15 @@ button[disabled] {
 
 label {
     font-size: 14px;
+}
+
+.example {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 40px 0 0 0;
+}
+
+.example p {
+    margin: 0px;
 }

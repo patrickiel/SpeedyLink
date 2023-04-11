@@ -77,12 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("addSet").addEventListener("click", addSet);
 
     loadOpenInCurrentTabSetting();
-    loadStoreEnteredTextSetting();
 
     function loadOpenInCurrentTabSetting() {
         const openInCurrentTabCheckbox = document.getElementById("openInCurrentTab");
         const openInCurrentTab = JSON.parse(localStorage.getItem("openInCurrentTab"));
-        openInCurrentTabCheckbox.checked = openInCurrentTab !== null ? openInCurrentTab : true;
+        openInCurrentTabCheckbox.checked = openInCurrentTab !== null ? openInCurrentTab : false;
         openInCurrentTabCheckbox.addEventListener("change", saveOpenInCurrentTabSetting);
     }
 
