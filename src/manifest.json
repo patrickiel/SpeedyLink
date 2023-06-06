@@ -19,9 +19,7 @@
         "128": "icon128.png"
     },
     "options_page": "options.html",
-    "permissions": [
-        "storage"
-    ],
+    "permissions": [],
     "commands": {
         "_execute_action": {
             "suggested_key": {
