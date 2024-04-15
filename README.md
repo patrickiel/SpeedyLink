@@ -15,7 +15,7 @@ Features
 
 Installation
 ------------
-Install from the Chrome [WebStore](https://chrome.google.com/webstore/search/SpeedyLink) or:
+Install from the Chrome [WebStore](https://chromewebstore.google.com/detail/speedylink/bekmllogfgnjalaibofikoemfgbhapmh) or:
 1.  Clone or download this repository.
 2.  Open Google Chrome and navigate to `chrome://extensions/`.
 3.  Enable "Developer mode".
